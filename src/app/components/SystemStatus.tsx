@@ -1,4 +1,3 @@
-// components/SystemStatus.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
