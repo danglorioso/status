@@ -24,7 +24,7 @@ const statusMap = {
   'coming-soon': { 
     text: 'Coming Soon...', 
     color: 'bg-gray-400',
-    textColor: 'text-gray-400'
+    textColor: 'text-yellow-600'
   },
 }
 
@@ -98,6 +98,10 @@ export default function StatusCard({
     if (isEven && !isLast) {
       classes += ' md:border-r'
       classes += ' md:border-b'
+    }
+
+    if (isLast) {
+      // classes += ' md:border-b'
     }
     
     return classes
