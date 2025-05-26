@@ -47,4 +47,10 @@ export const projects = [
     key: 'logbook',
     favicon: 'https://logbook.danglorioso.com/favicon.ico',
   },
+  {
+    name: 'Depature Board',
+    url: 'https://board.danglorioso.com',
+    key: 'board',
+    favicon: 'https://board.danglorioso.com/favicon.ico',
+  },
 ]
