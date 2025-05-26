@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dan Glorioso's System Status",
   description: "Current status of projects and systems",
-    icons: {
+  icons: {
     icon: "/favicon.ico",
   },
 };
