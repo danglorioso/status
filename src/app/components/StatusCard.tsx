@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-type Status = 'online' | 'offline' | 'booting'
+type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
 const statusMap = {
   online: { 
@@ -12,15 +12,20 @@ const statusMap = {
     color: 'bg-green-400',
     textColor: 'text-green-400'
   },
-  booting: { 
-    text: 'Starting Up', 
-    color: 'bg-orange-400 animate-pulse',
-    textColor: 'text-orange-400'
+  loading: { 
+    text: 'Checking...', 
+    color: 'bg-blue-400 animate-pulse',
+    textColor: 'text-blue-400'
   },
   offline: { 
     text: 'Down', 
     color: 'bg-red-400',
     textColor: 'text-red-400'
+  },
+  'coming-soon': { 
+    text: 'Coming Soon', 
+    color: 'bg-gray-400',
+    textColor: 'text-gray-400'
   },
 }
 
@@ -28,6 +33,7 @@ interface StatusCardProps {
   name: string
   url: string
   favicon?: string
+  comingSoon?: boolean
   projectKey: string
   isLast?: boolean
   isEven?: boolean
@@ -38,16 +44,27 @@ export default function StatusCard({
   name, 
   url, 
   favicon, 
+  comingSoon,
   projectKey, 
   isLast, 
   isEven, 
   onStatusUpdate 
 }: StatusCardProps) {
-  const [status, setStatus] = useState<Status>('booting')
+  const [status, setStatus] = useState<Status>(comingSoon ? 'coming-soon' : 'loading')
 
   const checkStatus = async () => {
+    // Don't check status for coming soon projects
+    if (comingSoon) {
+      setStatus('coming-soon')
+      onStatusUpdate(projectKey, 'coming-soon')
+      return
+    }
+
+    setStatus('loading')
+    onStatusUpdate(projectKey, 'loading')
+    
     try {
-      const res = await axios.get(url, { timeout: 3000 })
+      const res = await axios.get(url, { timeout: 5000 })
       if (res.status === 200) {
         setStatus('online')
         onStatusUpdate(projectKey, 'online')
@@ -63,10 +80,14 @@ export default function StatusCard({
 
   useEffect(() => {
     checkStatus()
+    
+    // Don't set up interval for coming soon projects
+    if (comingSoon) return
+    
     // Auto-refresh every 30 seconds
     const interval = setInterval(checkStatus, 30000)
     return () => clearInterval(interval)
-  }, [url])
+  }, [url, comingSoon])
 
   const { text, color, textColor } = statusMap[status]
 
