@@ -85,7 +85,7 @@ export default function SystemStatus({ projects }: SystemStatusProps) {
       </div>
 
       {/* Status Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm">
         {projects.map((proj, index) => (
           <StatusCard 
             key={proj.key} 

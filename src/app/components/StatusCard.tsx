@@ -23,7 +23,7 @@ const statusMap = {
   },
   'coming-soon': { 
     text: 'Coming Soon...', 
-    color: 'bg-gray-400',
+    color: 'bg-yellow-600',
     textColor: 'text-yellow-600'
   },
 }
@@ -97,11 +97,11 @@ export default function StatusCard({
     // Add right border for left column items (except last row if odd number of items)
     if (isEven && !isLast) {
       classes += ' md:border-r'
-      classes += ' md:border-b'
+      // classes += ' md:border-b'
     }
 
-    if (isLast) {
-      // classes += ' md:border-b'
+    if (!isLast) {
+      classes += ' md:border-b'
     }
     
     return classes
