@@ -65,4 +65,11 @@ export const projects = [
     key: 'status',
     favicon: 'https://status.danglorioso.com/favicon.ico',
   },
+  {
+    name: 'ADS-B Map',
+    url: 'https://adsb.danglorioso.com',
+    key: 'adsb',
+    favicon: 'https://abds.danglorioso.com/favicon.ico',
+    comingSoon: true,
+  },
 ]
