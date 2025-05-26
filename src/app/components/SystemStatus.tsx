@@ -94,7 +94,7 @@ export default function SystemStatus({ projects }: SystemStatusProps) {
             favicon={proj.favicon}
             comingSoon={proj.comingSoon}
             projectKey={proj.key}
-            isLast={index === projects.length - 1}
+            isLast={index === projects.length - 1 || index === projects.length - 2}
             isEven={index % 2 === 0}
             onStatusUpdate={handleStatusUpdate}
           />
