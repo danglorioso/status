@@ -53,4 +53,16 @@ export const projects = [
     key: 'board',
     favicon: 'https://board.danglorioso.com/favicon.ico',
   },
+  {
+    name: 'DG Blog',
+    url: 'https://blog.danglorioso.com',
+    key: 'blog',
+    favicon: 'https://blog.danglorioso.com/favicon.ico',
+  },
+  {
+    name: 'Status Page',
+    url: 'https://status.danglorioso.com',
+    key: 'status',
+    favicon: 'https://status.danglorioso.com/favicon.ico',
+  },
 ]
