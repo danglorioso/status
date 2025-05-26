@@ -1,13 +1,50 @@
 export const projects = [
   {
-    name: 'API Tracker',
-    url: 'https://track-api-pbqe.onrender.com',
-    key: 'api-tracker',
+    name: 'DG Portfolio',
+    url: 'https://www.danglorioso.com',
+    key: 'portfolio',
+    favicon: 'https://danglorioso.com/favicon.png',
+  },
+  {
+    name: 'Demo Portfolio',
+    url: 'https://demo.danglorioso.com',
+    key: 'demo',
+    favicon: 'https://demo.danglorioso.com/favicon.svg',
+  },
+  {
+    name: 'Track Record Upload',
+    url: 'https://track.danglorioso.com',
+    key: 'track',
+    favicon: 'https://track.danglorioso.com/favicon.ico',
+  },
+  {
+    name: 'Scott Glorioso Site',
+    url: 'https://scott.danglorioso.com',
+    key: 'scott',
+    favicon: 'https://scott.danglorioso.com/favicon.ico',
+  },
+  {
+    name: 'Dan\'s Pictures',
+    url: 'https://pics.danglorioso.com',
+    key: 'pics',
+    favicon: 'https://pics.danglorioso.com/favicon.ico',
+  },
+  {
+    name: 'Plane Compare',
+    url: 'https://planes.danglorioso.com',
+    key: 'planes',
+    favicon: 'https://planes.danglorioso.com/favicon.ico',
+  },
+  {
+    name: 'Lyrics',
+    url: 'https://lyrics.danglorioso.com',
+    key: 'lyrics',
+    favicon: 'https://lyrics.danglorioso.com/favicon.ico',
   },
   {
     name: 'Flight Logbook',
-    url: 'https://logbook.yourdomain.com',
+    url: 'https://logbook.danglorioso.com',
     key: 'logbook',
+    favicon: 'https://logbook.danglorioso.com/favicon.ico',
   },
-  // Add more here
 ]

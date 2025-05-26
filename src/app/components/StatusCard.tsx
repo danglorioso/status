@@ -8,22 +8,22 @@ type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
 const statusMap = {
   online: { 
-    text: 'Operational', 
+    text: 'Available', 
     color: 'bg-green-400',
     textColor: 'text-green-400'
   },
   loading: { 
-    text: 'Checking...', 
+    text: 'Loading...', 
     color: 'bg-blue-400 animate-pulse',
     textColor: 'text-blue-400'
   },
   offline: { 
-    text: 'Down', 
+    text: 'Unavailable', 
     color: 'bg-red-400',
     textColor: 'text-red-400'
   },
   'coming-soon': { 
-    text: 'Coming Soon', 
+    text: 'Coming Soon...', 
     color: 'bg-gray-400',
     textColor: 'text-gray-400'
   },
@@ -98,6 +98,7 @@ export default function StatusCard({
     // Add right border for left column items (except last row if odd number of items)
     if (isEven && !isLast) {
       classes += ' md:border-r'
+      classes += ' md:border-b'
     }
     
     return classes
