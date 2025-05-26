@@ -100,11 +100,6 @@ export default function StatusCard({
       classes += ' md:border-r'
     }
     
-    // Add bottom border for all items except the last two (bottom row)
-    if (!isLast && !(isLast && !isEven)) {
-      classes += ' border-b'
-    }
-    
     return classes
   }
 
