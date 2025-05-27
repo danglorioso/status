@@ -37,6 +37,7 @@ interface StatusCardProps {
   isLast?: boolean
   isEven?: boolean
   onStatusUpdate: (projectKey: string, status: Status) => void
+  setLastUpdated: (time: Date) => void
 }
 
 export default function StatusCard({ 
@@ -47,7 +48,8 @@ export default function StatusCard({
   projectKey, 
   isLast, 
   isEven, 
-  onStatusUpdate 
+  onStatusUpdate,
+  setLastUpdated
 }: StatusCardProps) {
   const [status, setStatus] = useState<Status>(comingSoon ? 'coming-soon' : 'loading')
 
@@ -74,10 +76,10 @@ export default function StatusCard({
     } catch {
       setStatus('offline')
       onStatusUpdate(projectKey, 'offline')
+    } finally {
+      // Update the time last updated
+      setLastUpdated(new Date())
     }
-
-    // Update the time last updated
-
   }
 
   useEffect(() => {
@@ -86,8 +88,8 @@ export default function StatusCard({
     // Don't set up interval for coming soon projects
     if (comingSoon) return
     
-    // Auto-refresh every 30 seconds
-    const interval = setInterval(checkStatus, 30000)
+    // Auto-refresh every 15 seconds
+    const interval = setInterval(checkStatus, 15000)
     return () => clearInterval(interval)
   }, [url, comingSoon])
 

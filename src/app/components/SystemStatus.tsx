@@ -15,9 +15,10 @@ interface Project {
 
 interface SystemStatusProps {
   projects: Project[]
+  setLastUpdated: (time: Date) => void
 }
 
-export default function SystemStatus({ projects }: SystemStatusProps) {
+export default function SystemStatus({ projects, setLastUpdated }: SystemStatusProps) {
   const [projectStatuses, setProjectStatuses] = useState<Record<string, Status>>({})
 
   // Calculate overall system status
@@ -104,6 +105,7 @@ export default function SystemStatus({ projects }: SystemStatusProps) {
             isLast={index === projects.length - 1 || index === projects.length - 2}
             isEven={index % 2 === 0}
             onStatusUpdate={handleStatusUpdate}
+            setLastUpdated={setLastUpdated}
           />
         ))}
       </div>
