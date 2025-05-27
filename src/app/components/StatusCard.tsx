@@ -84,6 +84,16 @@ export default function StatusCard({
   // }
 
   const checkStatus = async () => {
+    // Don't check status for coming soon projects
+    if (comingSoon) {
+      setStatus('coming-soon')
+      onStatusUpdate(projectKey, 'coming-soon')
+      return
+    }
+
+    setStatus('loading')
+    onStatusUpdate(projectKey, 'loading')
+    
     try {
       const res = await fetch(`/api/ping?url=${encodeURIComponent(url)}`)
       setStatus(res.status === 200 ? 'online' : 'offline')
