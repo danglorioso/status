@@ -53,31 +53,45 @@ export default function StatusCard({
 }: StatusCardProps) {
   const [status, setStatus] = useState<Status>(comingSoon ? 'coming-soon' : 'loading')
 
-  const checkStatus = async () => {
-    // Don't check status for coming soon projects
-    if (comingSoon) {
-      setStatus('coming-soon')
-      onStatusUpdate(projectKey, 'coming-soon')
-      return
-    }
+  // const checkStatus = async () => {
+  //   // Don't check status for coming soon projects
+  //   if (comingSoon) {
+  //     setStatus('coming-soon')
+  //     onStatusUpdate(projectKey, 'coming-soon')
+  //     return
+  //   }
 
-    setStatus('loading')
-    onStatusUpdate(projectKey, 'loading')
+  //   setStatus('loading')
+  //   onStatusUpdate(projectKey, 'loading')
     
+  //   try {
+  //     const res = await axios.get(url, { timeout: 5000 })
+  //     console.log(`[${name}] status: ${res.status}`)
+  //     if (res.status === 200 || res.status === 403) {
+  //       setStatus('online')
+  //       onStatusUpdate(projectKey, 'online')
+  //     } else {
+  //       setStatus('offline')
+  //       onStatusUpdate(projectKey, 'offline')
+  //     }
+  //   } catch {
+  //     setStatus('offline')
+  //     onStatusUpdate(projectKey, 'offline')
+  //   } finally {
+  //     // Update the time last updated
+  //     setLastUpdated(new Date())
+  //   }
+  // }
+
+  const checkStatus = async () => {
     try {
-      const res = await axios.get(url, { timeout: 5000 })
-      if (res.status === 200) {
-        setStatus('online')
-        onStatusUpdate(projectKey, 'online')
-      } else {
-        setStatus('offline')
-        onStatusUpdate(projectKey, 'offline')
-      }
+      const res = await fetch(`/api/ping?url=${encodeURIComponent(url)}`)
+      setStatus(res.status === 200 ? 'online' : 'offline')
+      onStatusUpdate(projectKey, res.status === 200 ? 'online' : 'offline')
+      setLastUpdated(new Date())
     } catch {
       setStatus('offline')
       onStatusUpdate(projectKey, 'offline')
-    } finally {
-      // Update the time last updated
       setLastUpdated(new Date())
     }
   }
