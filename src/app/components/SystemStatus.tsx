@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import StatusCard from './StatusCard'
+import Monogram from 'public/monogram.svg'
 
 type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
@@ -69,16 +70,23 @@ export default function SystemStatus({ projects }: SystemStatusProps) {
   return (
     <>
       {/* Header */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-white mb-2">System Status</h1>
+      <div className="text-center mb-6">
+        <img src="/monogram.svg" alt="DG" className="mx-auto mb-4 w-1/7 h-1/7" />
+        <h1 className="text-4xl font-bold text-white mb-4">System Status</h1>
         {overallStatus.loading ? (
           <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
-            <div className={`w-2 h-2 ${overallStatus.dotColor} rounded-full`}></div>
+            <div className="relative w-2 h-2 flex items-center justify-center">
+              <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
+              <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
+            </div>
             <span className="text-sm font-medium">{overallStatus.message}</span>
           </div>
         ) : (
           <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
-            <div className={`w-2 h-2 ${overallStatus.dotColor} rounded-full`}></div>
+            <div className="relative w-2 h-2 flex items-center justify-center">
+              <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
+              <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
+            </div>
             <span className="text-sm font-medium">{overallStatus.message}</span>
           </div>
         )}

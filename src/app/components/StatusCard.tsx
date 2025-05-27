@@ -8,7 +8,7 @@ type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 const statusMap = {
   online: { 
     text: 'Available', 
-    color: 'bg-green-400',
+    color: 'bg-green-400 animate-pulse',
     textColor: 'text-green-400'
   },
   loading: { 
