@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import StatusCard from './StatusCard'
-import Monogram from 'public/monogram.svg'
 
 type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
