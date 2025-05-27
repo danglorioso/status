@@ -72,10 +72,10 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
       {/* Header */}
       <div className="text-center mb-6">
         <img src="/monogram.svg" alt="DG" className="mx-auto mb-4 w-1/7 h-1/7" />
-        <h1 className="text-4xl font-bold text-white mb-4">System Status</h1>
+        <h1 className="text-4xl font-bold text-white mb-6">System Status</h1>
         {overallStatus.loading ? (
           <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
-            <div className="relative w-2 h-2 flex items-center justify-center">
+            <div className="relative w-2 h-2 mr-1 flex items-center justify-center">
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
             </div>
@@ -83,7 +83,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
           </div>
         ) : (
           <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
-            <div className="relative w-2 h-2 flex items-center justify-center">
+            <div className="relative w-2 h-2 mr-1 flex items-center justify-center">
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
             </div>
@@ -93,7 +93,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
       </div>
 
       {/* Status Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-7 gap-0 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm">
         {projects.map((proj, index) => (
           <StatusCard 
             key={proj.key} 
