@@ -10,7 +10,7 @@ export default function HomePage() {
         <SystemStatus projects={projects} />
         
         {/* Footer */}
-        <div className="text-center mt-12 text-gray-400 text-sm">
+        <div className="text-center mt-10 text-gray-400 text-sm">
           <p>Last updated: {new Date().toLocaleString()}</p>
         </div>
       </div>
