@@ -75,6 +75,9 @@ export default function StatusCard({
       setStatus('offline')
       onStatusUpdate(projectKey, 'offline')
     }
+
+    // Update the time last updated
+
   }
 
   useEffect(() => {

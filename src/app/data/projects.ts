@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: 'DG Portfolio',
-    url: 'https://www.danglorioso.com',
+    url: 'https://danglorioso.com',
     key: 'portfolio',
     favicon: 'https://danglorioso.com/favicon.png',
   },
