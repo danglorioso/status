@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 
 type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
@@ -52,36 +51,6 @@ export default function StatusCard({
   setLastUpdated
 }: StatusCardProps) {
   const [status, setStatus] = useState<Status>(comingSoon ? 'coming-soon' : 'loading')
-
-  // const checkStatus = async () => {
-  //   // Don't check status for coming soon projects
-  //   if (comingSoon) {
-  //     setStatus('coming-soon')
-  //     onStatusUpdate(projectKey, 'coming-soon')
-  //     return
-  //   }
-
-  //   setStatus('loading')
-  //   onStatusUpdate(projectKey, 'loading')
-    
-  //   try {
-  //     const res = await axios.get(url, { timeout: 5000 })
-  //     console.log(`[${name}] status: ${res.status}`)
-  //     if (res.status === 200 || res.status === 403) {
-  //       setStatus('online')
-  //       onStatusUpdate(projectKey, 'online')
-  //     } else {
-  //       setStatus('offline')
-  //       onStatusUpdate(projectKey, 'offline')
-  //     }
-  //   } catch {
-  //     setStatus('offline')
-  //     onStatusUpdate(projectKey, 'offline')
-  //   } finally {
-  //     // Update the time last updated
-  //     setLastUpdated(new Date())
-  //   }
-  // }
 
   const checkStatus = async () => {
     // Don't check status for coming soon projects
