@@ -11,6 +11,18 @@ export const projects = [
     key: 'demo',
     favicon: 'https://demo.danglorioso.com/favicon.svg',
   },
+    {
+    name: 'Under 30 VSCode Extension',
+    url: 'https://danglorioso.com/under-30',
+    key: 'under-30',
+    favicon: 'https://danglorioso.gallerycdn.vsassets.io/extensions/danglorioso/under-30/1.1.1/1736747102401/Microsoft.VisualStudio.Services.Icons.Default',
+  },
+  {
+    name: 'Header Hero VSCode Extension',
+    url: 'https://danglorioso.com/header-hero',
+    key: 'header-hero',
+    favicon: 'https://danglorioso.gallerycdn.vsassets.io/extensions/danglorioso/header-hero/1.0.2/1722298594849/Microsoft.VisualStudio.Services.Icons.Default',
+  },
   {
     name: 'Track Record Upload',
     url: 'https://track.danglorioso.com',
@@ -36,7 +48,7 @@ export const projects = [
     favicon: 'https://planes.danglorioso.com/favicon.ico',
   },
   {
-    name: 'Lyrics',
+    name: 'Lyrics - Hooked On',
     url: 'https://lyrics.danglorioso.com',
     key: 'lyrics',
     favicon: 'https://lyrics.danglorioso.com/favicon.ico',
