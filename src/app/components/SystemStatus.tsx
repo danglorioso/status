@@ -30,8 +30,8 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
       return { 
         loading: true,
         message: 'Checking Systems...',
-        color: 'text-orange-400',
-        dotColor: 'bg-orange-400 animate-pulse'
+        color: 'text-blue-400',
+        dotColor: 'bg-blue-400 animate-pulse'
       }
     }
     
@@ -39,6 +39,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
     const loadingCount = activeStatuses.filter(status => status === 'loading').length
     
     if (offlineCount === 0 && loadingCount === 0) {
+      // Everything is online
       return {
         loading: false,
         isOperational: true,
@@ -46,14 +47,24 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
         color: 'text-green-400',
         dotColor: 'bg-green-400'
       }
-    } else {
-      const unavailableCount = offlineCount + loadingCount
+    } else if (loadingCount === 0) {
+      // Some systems are offline
+      const unavailableCount = offlineCount
       return {
         loading: false,
         isOperational: false,
         message: `${unavailableCount} System${unavailableCount > 1 ? 's' : ''} Unavailable`,
         color: 'text-orange-400',
         dotColor: 'bg-orange-400'
+      }
+    } else {
+      // Still loading
+      return {
+        loading: false,
+        isOperational: false,
+        message: 'Checking Systems...',
+        color: 'text-blue-400',
+        dotColor: 'bg-blue-400 animate-pulse'
       }
     }
   }
