@@ -1,11 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import SystemStatus from './components/SystemStatus'
 import { projects } from './data/projects'
 
 export default function HomePage() {
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
+  const [now, setNow] = useState("");
+
+  // Set initial time (client-side)
+  useEffect(() => {
+    setNow(new Date().toLocaleString());
+  }, []);
 
   return (
     <main className="min-h-screen bg-gray-900 text-white">
@@ -16,7 +22,7 @@ export default function HomePage() {
         
         {/* Footer */}
         <div className="text-center mt-10 text-gray-400 text-sm">
-          <p>Last updated: {lastUpdated ? lastUpdated.toLocaleString() : new Date().toLocaleString()}</p>
+          <p>Last updated: {lastUpdated ? lastUpdated.toLocaleString() : now}</p>
         </div>
       </div>
     </main>

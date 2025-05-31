@@ -1,6 +1,5 @@
 'use client'
-
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
@@ -36,7 +35,7 @@ interface StatusCardProps {
   isLast?: boolean
   isEven?: boolean
   onStatusUpdate: (projectKey: string, status: Status) => void
-  setLastUpdated: (time: Date) => void
+  setLastUpdated: (time: string) => void
 }
 
 export default function StatusCard({ 
@@ -51,6 +50,12 @@ export default function StatusCard({
   setLastUpdated
 }: StatusCardProps) {
   const [status, setStatus] = useState<Status>(comingSoon ? 'coming-soon' : 'loading')
+  const [now, setNow] = useState("");
+
+  // Set initial time (client-side)
+  useEffect(() => {
+    setNow(new Date().toLocaleString());
+  }, []);
 
   const checkStatus = async () => {
     // Don't check status for coming soon projects
@@ -67,11 +72,11 @@ export default function StatusCard({
       const res = await fetch(`/api/ping?url=${encodeURIComponent(url)}`)
       setStatus(res.status === 200 ? 'online' : 'offline')
       onStatusUpdate(projectKey, res.status === 200 ? 'online' : 'offline')
-      setLastUpdated(new Date())
+      setLastUpdated(now)
     } catch {
       setStatus('offline')
       onStatusUpdate(projectKey, 'offline')
-      setLastUpdated(new Date())
+      setLastUpdated(now)
     }
   }
 
