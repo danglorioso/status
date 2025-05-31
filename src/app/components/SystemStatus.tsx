@@ -90,7 +90,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
             </div>
-            <span className="text-sm font-medium">{overallStatus.message}</span>
+            <span className="text-md font-medium">{overallStatus.message}</span>
           </div>
         ) : (
           <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
