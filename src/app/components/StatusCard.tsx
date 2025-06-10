@@ -2,6 +2,7 @@
 
 'use client'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
@@ -11,17 +12,17 @@ const statusMap = {
     color: 'bg-green-400 animate-pulse',
     textColor: 'text-green-400'
   },
-  loading: { 
+  loading: {
     text: 'Loading...', 
     color: 'bg-blue-400 animate-pulse',
     textColor: 'text-blue-400'
   },
-  offline: { 
+  offline: {
     text: 'Unavailable', 
     color: 'bg-red-400',
     textColor: 'text-red-400'
   },
-  'coming-soon': { 
+  'coming-soon': {
     text: 'Coming Soon...', 
     color: 'bg-yellow-600',
     textColor: 'text-yellow-600'
@@ -137,7 +138,9 @@ export default function StatusCard({
             }}
           />
         )}
-        <span className="text-white font-medium text-base">{name}</span>
+        <Link href={url} target="_blank" rel="noopener noreferrer" className="text-white font-medium text-base">
+          {name}
+        </Link>
       </div>
       
       <div className="flex items-center gap-3">
