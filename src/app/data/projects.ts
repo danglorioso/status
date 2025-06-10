@@ -31,9 +31,9 @@ export const projects = [
   },
   {
     name: 'Scott Glorioso Site',
-    url: 'https://scott.danglorioso.com',
+    url: 'https://scottglorioso.com',
     key: 'scott',
-    favicon: 'https://scott.danglorioso.com/favicon.ico',
+    favicon: 'https://scottglorioso.com/favicon.ico',
   },
   {
     name: 'Dan\'s Pictures',
