@@ -1,3 +1,5 @@
+// This file is the whole system status
+
 'use client'
 
 import { useState } from 'react'
