@@ -42,6 +42,12 @@ export const projects = [
     favicon: 'https://pics.danglorioso.com/favicon.ico',
   },
   {
+    name: 'Comedy on the Loose Site',
+    url: 'https://cotl.danglorioso.com',
+    key: 'cotl',
+    favicon: 'https://cotl.danglorioso.com/favicon.ico',
+  },
+  {
     name: 'Plane Compare',
     url: 'https://planes.danglorioso.com',
     key: 'planes',
@@ -64,12 +70,6 @@ export const projects = [
     url: 'https://board.danglorioso.com',
     key: 'board',
     favicon: 'https://board.danglorioso.com/favicon.ico',
-  },
-  {
-    name: 'DG Blog',
-    url: 'https://blog.danglorioso.com',
-    key: 'blog',
-    favicon: 'https://blog.danglorioso.com/static/favicons/favicon-32x32.png',
   },
   {
     name: 'Status Page',
