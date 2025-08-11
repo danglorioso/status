@@ -48,6 +48,13 @@ export const projects = [
     favicon: 'https://cotl.danglorioso.com/favicon.ico',
   },
   {
+    name: 'METAR Decoder',
+    url: 'https://metar.danglorioso.com',
+    key: 'metar',
+    favicon: 'https://metar.danglorioso.com/favicon.ico',
+    // comingSoon: true,
+  },
+  {
     name: 'Plane Compare',
     url: 'https://planes.danglorioso.com',
     key: 'planes',
@@ -76,12 +83,5 @@ export const projects = [
     url: 'https://status.danglorioso.com',
     key: 'status',
     favicon: 'https://status.danglorioso.com/favicon.ico',
-  },
-  {
-    name: 'ADS-B Map',
-    url: 'https://adsb.danglorioso.com',
-    key: 'adsb',
-    favicon: 'https://abds.danglorioso.com/favicon.ico',
-    comingSoon: true,
   },
 ]
