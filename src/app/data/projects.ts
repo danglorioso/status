@@ -3,10 +3,10 @@ export const projects = [
     name: 'DG Portfolio',
     url: 'https://danglorioso.com/',
     key: 'portfolio',
-    favicon: 'https://danglorioso.com/favicon.png',
+    favicon: 'https://danglorioso.com/favicon.svg',
   },
   {
-    name: 'Demo Portfolio',
+    name: 'Demo Playground',
     url: 'https://demo.danglorioso.com',
     key: 'demo',
     favicon: 'https://demo.danglorioso.com/favicon.svg',
@@ -52,13 +52,13 @@ export const projects = [
     url: 'https://metar.danglorioso.com',
     key: 'metar',
     favicon: 'https://metar.danglorioso.com/favicon.ico',
-    // comingSoon: true,
   },
   {
     name: 'Plane Compare',
     url: 'https://planes.danglorioso.com',
     key: 'planes',
     favicon: 'https://planes.danglorioso.com/favicon.ico',
+    comingSoon: true,
   },
   {
     name: 'Lyrics - Hooked On',
@@ -77,6 +77,7 @@ export const projects = [
     url: 'https://board.danglorioso.com',
     key: 'board',
     favicon: 'https://board.danglorioso.com/favicon.ico',
+    comingSoon: true,
   },
   {
     name: 'Status Page',
