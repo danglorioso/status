@@ -1,13 +1,24 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 interface FooterProps {
   lastUpdated?: Date
 }
 
 export default function Footer({ lastUpdated }: FooterProps) {
+  const [initialClientTime, setInitialClientTime] = useState<string | null>(null)
+
+  useEffect(() => {
+  // Set fallback time only on the client
+  setInitialClientTime(new Date().toLocaleString())
+  }, [])
+
   return (
     <div className="space-y-4">
       {/* Footer */}
       <div className="text-center mt-5 text-gray-400 text-sm">
-        <p>Last updated: {lastUpdated ? lastUpdated.toLocaleString() : 'Never'}</p>
+        <p>Last updated: {lastUpdated ? lastUpdated.toLocaleString() : initialClientTime }</p>
       </div>
 
       {/* Status Legend */}
