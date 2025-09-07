@@ -4,7 +4,7 @@ interface FooterProps {
 
 export default function Footer({ lastUpdated }: FooterProps) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {/* Footer */}
       <div className="text-center mt-5 text-gray-400 text-sm">
         <p>Last updated: {lastUpdated ? lastUpdated.toLocaleString() : 'Never'}</p>
