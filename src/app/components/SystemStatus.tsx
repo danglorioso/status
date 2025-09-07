@@ -218,7 +218,9 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
               }`}>
                 {/* Main project row */}
                 <div 
-                  className="cursor-pointer hover:bg-gray-700/30 transition-colors px-6 py-5"
+                  className={`cursor-pointer transition-colors px-6 py-5 ${
+                    isExpanded ? 'bg-gray-700/30' : 'hover:bg-gray-700/30'
+                  }`}
                   onClick={() => toggleExpanded(proj.key)}
                 >
                 <div className="flex items-center justify-between">
