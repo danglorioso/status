@@ -197,31 +197,30 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
       </div>
 
       {/* Status Table */}
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-7 gap-0 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm">
-        {projects.map((proj, index) => {
-          const isEven = index % 2 === 0
-          const isLastRow = index >= projects.length - 2
-          const isLast = index === projects.length - 1
-          const isExpanded = expandedProjects.has(proj.key)
-          
-          return (
-            <div key={proj.key} className="flex flex-col">
-              {/* Main project row */}
-              <div 
-                className={`cursor-pointer hover:bg-gray-700/30 transition-colors px-6 py-5 border-gray-700 ${
-                  // Only add bottom border if not expanded and not last row
-                  !isExpanded && !isLastRow ? 'border-b' : ''
-                } ${
-                  // Add bottom border if this is last row but not expanded
-                  !isExpanded && isLastRow && !isLast ? 'border-b' : ''
-                } ${
-                  // Right border logic
-                  isEven && !isLast ? 'md:border-r' : ''
-                } ${
-                  isEven && isLast && projects.length % 2 !== 0 ? 'md:border-r' : ''
-                }`}
-                onClick={() => toggleExpanded(proj.key)}
-              >
+      <div className="mt-7 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 divide-y divide-gray-700 md:divide-y-0">
+          {projects.map((proj, index) => {
+            const isEven = index % 2 === 0
+            const isLastRow = index >= projects.length - 2
+            const isLast = index === projects.length - 1
+            const isExpanded = expandedProjects.has(proj.key)
+            
+            return (
+              <div key={proj.key} className={`flex flex-col ${
+                // Add right border for left column and left border for right column
+                isEven ? 'md:border-r md:border-gray-700' : 'md:border-l md:border-gray-700'
+              } ${
+                // Add bottom border for all items except the last row
+                !isLastRow ? 'border-b border-gray-700' : ''
+              } ${
+                // Add bottom border for second-to-last item if it's the last item and we have odd number
+                isLastRow && !isLast ? 'border-b border-gray-700' : ''
+              }`}>
+                {/* Main project row */}
+                <div 
+                  className="cursor-pointer hover:bg-gray-700/30 transition-colors px-6 py-5"
+                  onClick={() => toggleExpanded(proj.key)}
+                >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     {/* Favicon */}
@@ -259,54 +258,44 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
                 </div>
               </div>
               
-              {/* Expanded content */}
-              {isExpanded && (
-                <div className={`px-6 border-gray-700 ${
-                  // Add bottom border only if not last row
-                  !isLastRow ? 'border-b' : ''
-                } ${
-                  // Add bottom border if this is the last item of an odd-numbered list
-                  isLastRow && !isLast ? 'border-b' : ''
-                } ${
-                  // Right border logic for expanded content
-                  isEven && !isLast ? 'md:border-r' : ''
-                } ${
-                  isEven && isLast && projects.length % 2 !== 0 ? 'md:border-r' : ''
-                }`}>
-                  <div className="pb-5 pt-3">
-                    {/* Description */}
-                    {proj.description && (
-                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                        {proj.description}
-                      </p>
-                    )}
-                    
-                    {/* Links */}
-                    {proj.links && proj.links.length > 0 && (
-                      <div className="flex flex-wrap gap-2">
-                        {proj.links.map((link, linkIndex) => (
-                          <a
-                            key={linkIndex}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-400 bg-blue-400/10 hover:bg-blue-400/20 rounded-md transition-colors border border-blue-400/20 hover:border-blue-400/40"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            {link.label}
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </a>
-                        ))}
-                      </div>
-                    )}
+                {/* Expanded content */}
+                {isExpanded && (
+                  <div className="px-6 py-0">
+                    <div className="pb-5 pt-3">
+                      {/* Description */}
+                      {proj.description && (
+                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                          {proj.description}
+                        </p>
+                      )}
+                      
+                      {/* Links */}
+                      {proj.links && proj.links.length > 0 && (
+                        <div className="flex flex-wrap gap-2">
+                          {proj.links.map((link, linkIndex) => (
+                            <a
+                              key={linkIndex}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-400 bg-blue-400/10 hover:bg-blue-400/20 rounded-md transition-colors border border-blue-400/20 hover:border-blue-400/40"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              {link.label}
+                              <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          )
-        })}
+                )}
+              </div>
+            )
+          })}
+        </div>
       </div>
     </>
   )
