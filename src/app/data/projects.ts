@@ -4,7 +4,7 @@ export const projects = [
     url: 'https://danglorioso.com/',
     key: 'portfolio',
     favicon: 'https://danglorioso.com/favicon.svg',
-    description: 'My personal portfolio website showcasing my projects, skills, and experience. Built with modern web technologies and responsive design.',
+    description: 'My personal portfolio website showcasing my projects, skills, and experience. Built in Astro.',
     links: [
       { label: 'View Portfolio', url: 'https://danglorioso.com/' },
       { label: 'Contact', url: 'https://danglorioso.com/contact' }
@@ -15,7 +15,7 @@ export const projects = [
     url: 'https://demo.danglorioso.com',
     key: 'demo',
     favicon: 'https://demo.danglorioso.com/favicon.svg',
-    description: 'A collection of interactive demos and experiments showcasing various web technologies and creative coding projects.',
+    description: 'A collection of interactive demos for me to experiment with new web technologies I\'ve discovered.',
     links: [
       { label: 'Explore Demos', url: 'https://demo.danglorioso.com' },
       { label: 'Source Code', url: 'https://github.com/danglorioso/demo' }
@@ -26,10 +26,10 @@ export const projects = [
     url: 'https://danglorioso.com/under-30',
     key: 'under-30',
     favicon: 'https://danglorioso.gallerycdn.vsassets.io/extensions/danglorioso/under-30/1.1.1/1736747102401/Microsoft.VisualStudio.Services.Icons.Default',
-    description: 'A VSCode extension that helps developers stay focused by limiting coding sessions to 30-minute intervals with built-in break reminders.',
+    description: 'A VSCode extension that helps developers maintain good coding standards by limiting function lengths to set thresholds.',
     links: [
-      { label: 'Install Extension', url: 'https://marketplace.visualstudio.com/items?itemName=danglorioso.under-30' },
-      { label: 'Learn More', url: 'https://danglorioso.com/under-30' }
+      { label: 'Install Extension', url: 'https://danglorioso.com/under-30' },
+      { label: 'Learn More', url: 'https://danglorioso.com/projects/under-30' }
     ]
   },
   {
@@ -37,10 +37,10 @@ export const projects = [
     url: 'https://danglorioso.com/header-hero',
     key: 'header-hero',
     favicon: 'https://danglorioso.gallerycdn.vsassets.io/extensions/danglorioso/header-hero/1.0.2/1722298594849/Microsoft.VisualStudio.Services.Icons.Default',
-    description: 'VSCode extension that automatically generates beautiful ASCII art headers for your code files with customizable styles and fonts.',
+    description: 'A VSCode extension that automatically generates smart and customizable headers for your code files with various styles.',
     links: [
-      { label: 'Install Extension', url: 'https://marketplace.visualstudio.com/items?itemName=danglorioso.header-hero' },
-      { label: 'Learn More', url: 'https://danglorioso.com/header-hero' }
+      { label: 'Install Extension', url: 'http://danglorioso.com/header-hero' },
+      { label: 'Learn More', url: 'https://danglorioso.com/projects/header-hero' }
     ]
   },
   {
@@ -48,7 +48,7 @@ export const projects = [
     url: 'https://track.danglorioso.com',
     key: 'track',
     favicon: 'https://track.danglorioso.com/favicon.ico',
-    description: 'Music discovery tool that allows users to upload and share their favorite tracks, creating personalized playlists and recommendations.',
+    description: 'A smart web application that automatically detects, parses, and standardizes track meet results into clean CSV reports for data analysis.',
     links: [
       { label: 'Upload Tracks', url: 'https://track.danglorioso.com' },
       { label: 'Browse Music', url: 'https://track.danglorioso.com/browse' }
@@ -59,7 +59,7 @@ export const projects = [
     url: 'https://scottglorioso.com',
     key: 'scott',
     favicon: 'https://scottglorioso.com/favicon.ico',
-    description: 'Professional website for Scott Glorioso featuring his work, achievements, and contact information with a clean, modern design.',
+    description: 'Professional musician website featuring album, song, and performance details with a modern, scalable design.',
     links: [
       { label: 'Visit Site', url: 'https://scottglorioso.com' },
       { label: 'Contact Scott', url: 'https://scottglorioso.com/contact' }
@@ -70,7 +70,7 @@ export const projects = [
     url: 'https://pics.danglorioso.com',
     key: 'pics',
     favicon: 'https://pics.danglorioso.com/favicon.ico',
-    description: 'Personal photography portfolio showcasing travel, nature, and street photography with high-quality image galleries.',
+    description: 'Personal photography portfolio showcasing my work, complete with Exif metadata.',
     links: [
       { label: 'View Gallery', url: 'https://pics.danglorioso.com' },
       { label: 'Latest Photos', url: 'https://pics.danglorioso.com/latest' }
@@ -81,10 +81,10 @@ export const projects = [
     url: 'https://cotl.danglorioso.com',
     key: 'cotl',
     favicon: 'https://cotl.danglorioso.com/favicon.ico',
-    description: 'Official website for Comedy on the Loose, featuring show schedules, performer profiles, and ticket information for live comedy events.',
+    description: 'Official website for sketch comedy TV show Comedy on the Loose, featuring episode links, sketches, and airing schedules.',
     links: [
-      { label: 'Show Schedule', url: 'https://cotl.danglorioso.com/shows' },
-      { label: 'Buy Tickets', url: 'https://cotl.danglorioso.com/tickets' }
+      { label: 'View Website', url: 'https://cotl.danglorioso.com/' },
+      { label: 'Show Schedule', url: 'https://comedyontheloose.com/schedule' }
     ]
   },
   {
@@ -92,7 +92,7 @@ export const projects = [
     url: 'https://metar.danglorioso.com',
     key: 'metar',
     favicon: 'https://metar.danglorioso.com/favicon.ico',
-    description: 'Aviation weather tool that decodes METAR reports into human-readable format, helping pilots understand current weather conditions.',
+    description: 'Aviation weather tool that decodes METAR reports into human-readable format with hover-over tooltips.',
     links: [
       { label: 'Decode METAR', url: 'https://metar.danglorioso.com' },
       { label: 'Aviation Weather', url: 'https://metar.danglorioso.com/weather' }
@@ -104,7 +104,7 @@ export const projects = [
     key: 'planes',
     favicon: 'https://planes.danglorioso.com/favicon.ico',
     comingSoon: true,
-    description: 'Comprehensive aircraft comparison tool allowing users to compare specifications, performance, and features of different aircraft models.',
+    description: 'Comprehensive aircraft comparison tool to compare specifications, performance, and features of different aircraft models.',
     links: [
       { label: 'Coming Soon', url: '#' },
       { label: 'Aviation Tools', url: 'https://metar.danglorioso.com' }
@@ -115,7 +115,7 @@ export const projects = [
     url: 'https://lyrics.danglorioso.com',
     key: 'lyrics',
     favicon: 'https://lyrics.danglorioso.com/favicon.ico',
-    description: 'Interactive lyrics game where players guess songs based on snippets. Features multiple difficulty levels and music from various genres.',
+    description: 'Lyric search tool that lets you select an artist and search for specific keywords across their entire discography.',
     links: [
       { label: 'Play Game', url: 'https://lyrics.danglorioso.com' },
       { label: 'High Scores', url: 'https://lyrics.danglorioso.com/scores' }
@@ -126,7 +126,7 @@ export const projects = [
     url: 'https://logbook.danglorioso.com',
     key: 'logbook',
     favicon: 'https://logbook.danglorioso.com/favicon.ico',
-    description: 'Digital pilot logbook for tracking flight hours, aircraft types, and certifications with detailed analytics and reporting features.',
+    description: 'Digital pilot logbook for tracking flight hours intended for flight simulator enthusiasts.',
     links: [
       { label: 'View Logbook', url: 'https://logbook.danglorioso.com' },
       { label: 'Flight Stats', url: 'https://logbook.danglorioso.com/stats' }
@@ -138,7 +138,7 @@ export const projects = [
     key: 'board',
     favicon: 'https://board.danglorioso.com/favicon.ico',
     comingSoon: true,
-    description: 'Real-time flight departure board displaying live airport information with beautiful animations and detailed flight tracking.',
+    description: 'Real-time flight departure board displaying live airport information.',
     links: [
       { label: 'Coming Soon', url: '#' },
       { label: 'Aviation Apps', url: 'https://logbook.danglorioso.com' }
@@ -149,7 +149,7 @@ export const projects = [
     url: 'https://status.danglorioso.com',
     key: 'status',
     favicon: 'https://status.danglorioso.com/favicon.ico',
-    description: 'Real-time status monitoring dashboard for all my projects and services, providing uptime statistics and system health information.',
+    description: 'Real-time status monitoring dashboard for all my projects and services.',
     links: [
       { label: 'View Status', url: 'https://status.danglorioso.com' },
       { label: 'System Health', url: 'https://status.danglorioso.com/health' }
