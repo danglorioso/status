@@ -50,8 +50,7 @@ export const projects = [
     favicon: 'https://track.danglorioso.com/favicon.ico',
     description: 'A smart web application that automatically detects, parses, and standardizes track meet results into clean CSV reports for data analysis.',
     links: [
-      { label: 'Upload Tracks', url: 'https://track.danglorioso.com' },
-      { label: 'Browse Music', url: 'https://track.danglorioso.com/browse' }
+      { label: 'Visit project', url: 'https://track.danglorioso.com' }
     ]
   },
   {
@@ -61,8 +60,7 @@ export const projects = [
     favicon: 'https://scottglorioso.com/favicon.ico',
     description: 'Professional musician website featuring album, song, and performance details with a modern, scalable design.',
     links: [
-      { label: 'Visit Site', url: 'https://scottglorioso.com' },
-      { label: 'Contact Scott', url: 'https://scottglorioso.com/contact' }
+      { label: 'Visit', url: 'https://scottglorioso.com' },
     ]
   },
   {
@@ -72,8 +70,7 @@ export const projects = [
     favicon: 'https://pics.danglorioso.com/favicon.ico',
     description: 'Personal photography portfolio showcasing my work, complete with Exif metadata.',
     links: [
-      { label: 'View Gallery', url: 'https://pics.danglorioso.com' },
-      { label: 'Latest Photos', url: 'https://pics.danglorioso.com/latest' }
+      { label: 'View Gallery', url: 'https://pics.danglorioso.com' }
     ]
   },
   {
@@ -83,8 +80,7 @@ export const projects = [
     favicon: 'https://cotl.danglorioso.com/favicon.ico',
     description: 'Official website for sketch comedy TV show Comedy on the Loose, featuring episode links, sketches, and airing schedules.',
     links: [
-      { label: 'View Website', url: 'https://cotl.danglorioso.com/' },
-      { label: 'Show Schedule', url: 'https://comedyontheloose.com/schedule' }
+      { label: 'Visit COTL', url: 'https://cotl.danglorioso.com/' }
     ]
   },
   {
@@ -94,8 +90,7 @@ export const projects = [
     favicon: 'https://metar.danglorioso.com/favicon.ico',
     description: 'Aviation weather tool that decodes METAR reports into human-readable format with hover-over tooltips.',
     links: [
-      { label: 'Decode METAR', url: 'https://metar.danglorioso.com' },
-      { label: 'Aviation Weather', url: 'https://metar.danglorioso.com/weather' }
+      { label: 'Decode METAR', url: 'https://metar.danglorioso.com' }
     ]
   },
   {
@@ -107,7 +102,7 @@ export const projects = [
     description: 'Comprehensive aircraft comparison tool to compare specifications, performance, and features of different aircraft models.',
     links: [
       { label: 'Coming Soon', url: '#' },
-      { label: 'Aviation Tools', url: 'https://metar.danglorioso.com' }
+      { label: 'Other Aviation Tools', url: 'https://metar.danglorioso.com' }
     ]
   },
   {
@@ -117,8 +112,7 @@ export const projects = [
     favicon: 'https://lyrics.danglorioso.com/favicon.ico',
     description: 'Lyric search tool that lets you select an artist and search for specific keywords across their entire discography.',
     links: [
-      { label: 'Play Game', url: 'https://lyrics.danglorioso.com' },
-      { label: 'High Scores', url: 'https://lyrics.danglorioso.com/scores' }
+      { label: 'Visit', url: 'https://lyrics.danglorioso.com' }
     ]
   },
   {
@@ -141,7 +135,7 @@ export const projects = [
     description: 'Real-time flight departure board displaying live airport information.',
     links: [
       { label: 'Coming Soon', url: '#' },
-      { label: 'Aviation Apps', url: 'https://logbook.danglorioso.com' }
+      { label: 'Other Aviation Apps', url: 'https://metar.danglorioso.com' }
     ]
   },
   {
@@ -151,8 +145,7 @@ export const projects = [
     favicon: 'https://status.danglorioso.com/favicon.ico',
     description: 'Real-time status monitoring dashboard for all my projects and services.',
     links: [
-      { label: 'View Status', url: 'https://status.danglorioso.com' },
-      { label: 'System Health', url: 'https://status.danglorioso.com/health' }
+      { label: 'View Status', url: 'https://status.danglorioso.com' }
     ]
   },
 ]
