@@ -112,7 +112,7 @@ export const projects = [
     favicon: 'https://lyrics.danglorioso.com/favicon.ico',
     description: 'Lyric search tool that lets you select an artist and search for specific keywords across their entire discography.',
     links: [
-      { label: 'Visit', url: 'https://lyrics.danglorioso.com' }
+      { label: 'Visit project', url: 'https://lyrics.danglorioso.com' }
     ]
   },
   {
