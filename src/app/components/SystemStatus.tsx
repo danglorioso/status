@@ -176,6 +176,20 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
     <>
       {/* Header */}
       <div className="text-center mb-6">
+        <div className="flex justify-start mb-4">
+          <Link 
+            href="https://danglorioso.com"
+            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors bg-gray-800/50 hover:bg-gray-700/50 rounded-lg border border-gray-700/50 hover:border-gray-600/50 backdrop-blur-sm"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Main Site
+          </Link>
+        </div>
+
+
+
         <Link href="https://danglorioso.com">
           <img src="/monogram.svg" alt="DG" className="mx-auto mb-4" />
         </Link>
