@@ -197,7 +197,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
       </div>
 
       {/* Status Table */}
-  <div className="mt-7 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm shadow-[0_0_30px_10px_rgba(0,0,0,0.2)]">
+  <div className="mt-7 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm shadow-[0_0_30px_1px_rgba(0,0,0,0.1)]">
         <div className="grid grid-cols-1 md:grid-cols-2 divide-y divide-gray-700 md:divide-y-0">
           {projects.map((proj, index) => {
             const isEven = index % 2 === 0
