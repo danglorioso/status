@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 type Status = 'online' | 'offline' | 'loading' | 'coming-soon'
 
@@ -175,7 +176,9 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
     <>
       {/* Header */}
       <div className="text-center mb-6">
-        <img src="/monogram.svg" alt="DG" className="mx-auto mb-4" />
+        <Link href="https://danglorioso.com">
+          <img src="/monogram.svg" alt="DG" className="mx-auto mb-4" />
+        </Link>
         <h1 className="text-4xl font-bold text-white mb-6">System Status</h1>
         {overallStatus.loading ? (
           <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
