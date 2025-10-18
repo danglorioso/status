@@ -72,13 +72,6 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
     }
   }
 
-  const handleStatusUpdate = (projectKey: string, status: Status) => {
-    setProjectStatuses(prev => ({
-      ...prev,
-      [projectKey]: status
-    }))
-  }
-
   const toggleExpanded = (projectKey: string) => {
     setExpandedProjects(prev => {
       const newSet = new Set(prev)
@@ -187,8 +180,6 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
             Back to Main Site
           </Link>
         </div>
-
-
 
         <Link href="https://danglorioso.com">
           <img src="/monogram.svg" alt="DG" className="mx-auto mb-4" />
