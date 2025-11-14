@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import SystemStatus from './components/SystemStatus'
 import { projects } from './data/projects'
+import Key from './components/Key'
 import Footer from './components/Footer'
 
 export default function HomePage() {
@@ -16,9 +17,11 @@ export default function HomePage() {
           setLastUpdated={setLastUpdated}
         />
         
-        <Footer 
+        <Key 
           lastUpdated={lastUpdated ?? undefined}
         />
+
+        <Footer />
 
       </div>
     </main>
