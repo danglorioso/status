@@ -168,7 +168,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
   return (
     <>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className="text-center">
         <div className="flex justify-start">
           <Link 
             href="https://danglorioso.com"
@@ -184,9 +184,9 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
         <Link href="https://danglorioso.com">
           <img src="/monogram.svg" alt="DG" className="mx-auto mb-4" />
         </Link>
-        <h1 className="text-4xl font-bold text-white mb-6">System Status</h1>
+        <h1 className="text-4xl font-bold text-white my-4">System Status</h1>
         {overallStatus.loading ? (
-          <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
+          <div className={`flex items-center justify-center gap-2 my-4 ${overallStatus.color}`}>
             <div className="relative w-2 h-2 mr-1 flex items-center justify-center">
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
@@ -194,7 +194,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
             <span className="text-md font-medium">{overallStatus.message}</span>
           </div>
         ) : (
-          <div className={`flex items-center justify-center gap-2 ${overallStatus.color}`}>
+          <div className={`flex items-center justify-center gap-2 my-4 ${overallStatus.color}`}>
             <div className="relative w-2 h-2 mr-1 flex items-center justify-center">
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-pulse opacity-75`}></div>
               <div className={`absolute inset-0 ${overallStatus.dotColor} rounded-full animate-ping opacity-75`}></div>
@@ -205,7 +205,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
       </div>
 
       {/* Status Table */}
-  <div className="mt-7 border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm shadow-[0_0_30px_1px_rgba(0,0,0,0.1)]">
+  <div className="border-2 border-gray-700 rounded-lg overflow-hidden bg-gray-800/50 backdrop-blur-sm shadow-[0_0_30px_1px_rgba(0,0,0,0.1)] mt-6">
         <div className="grid grid-cols-1 md:grid-cols-2 divide-y divide-gray-700 md:divide-y-0">
           {projects.map((proj, index) => {
             const isEven = index % 2 === 0

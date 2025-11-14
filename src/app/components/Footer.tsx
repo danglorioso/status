@@ -32,7 +32,7 @@ export default function Footer() {
                 <FaGithub className="w-7 h-7" />
                 </a>
                 {/* Email */}
-                <a
+                {/* <a
                 href="/mail"
                 target="_blank" // Open in new tab
                 rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function Footer() {
                 aria-label="Email"
                 >
                 <FaEnvelope className="w-7 h-7" />
-                </a>
+                </a> */}
             </div>
 
           {/* Copyright */}
@@ -111,7 +111,7 @@ export default function Footer() {
                 <FaGithub className="w-7 h-7" />
                 </a>
                 {/* Email */}
-                <a
+                {/* <a
                 href="/mail"
                 target="_blank" // Open in new tab
                 rel="noopener noreferrer"
@@ -119,7 +119,7 @@ export default function Footer() {
                 aria-label="Email"
                 >
                 <FaEnvelope className="w-7 h-7" />
-                </a>
+                </a> */}
             </div>
           </div>
         </div>
