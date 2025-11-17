@@ -220,9 +220,6 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
               } ${
                 // Add bottom border for all items except the last row
                 !isLastRow ? 'border-b border-gray-700' : ''
-              } ${
-                // Add bottom border for second-to-last item if it's the last item and we have odd number
-                isLastRow && !isLast ? 'border-b border-gray-700' : ''
               }`}>
                 {/* Main project row */}
                 <div 
