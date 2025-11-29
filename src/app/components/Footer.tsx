@@ -12,7 +12,7 @@ export default function Footer() {
                     <div className="flex space-x-5">
                         {/* LinkedIn */}
                         <a
-                            href="/linkedin"
+                            href="https://danglorioso.com/linkedin"
                             target="_blank" // Open in new tab
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white hover:scale-105 transition-colors duration-300 ease-in-out"
@@ -22,7 +22,7 @@ export default function Footer() {
                         </a>
                         {/* Github */}
                         <a
-                            href="/github"
+                            href="https://danglorioso.com/github"
                             target="_blank" // Open in new tab
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white hover:scale-105 transition-colors duration-300 ease-in-out"
