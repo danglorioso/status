@@ -189,7 +189,7 @@ export default function SystemStatus({
         <>
             {/* Header */}
             <div className="text-center">
-                <div className="flex justify-start">
+                <div className="flex justify-start mb-10 md:mb-0">
                     <Link
                         href="https://danglorioso.com"
                         className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors bg-gray-800/50 hover:bg-gray-700/50 rounded-lg border border-gray-700/50 hover:border-gray-600/50 backdrop-blur-sm"

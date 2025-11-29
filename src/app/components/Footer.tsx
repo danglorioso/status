@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="w-full py-6 border-t border-gray-800 z-50 mt-10">
             <div className="max-w-5xl mx-auto px-8">
                 {/* MOBILE - Stack with social icons on top */}
-                <div className="sm:hidden flex flex-col space-y-2">
+                <div className="sm:hidden flex flex-col gap-4 items-center">
                     {/* Mobile Social Icons at top */}
                     <div className="flex space-x-5">
                         {/* LinkedIn */}
@@ -55,19 +55,6 @@ export default function Footer() {
                         </a>
                         .
                     </p>
-
-                    {/* Status Links */}
-                    <div className="flex justify-center">
-                        <p className="text-sm text-gray-500 flex items-center">
-                            <a
-                                href="/contact"
-                                target="" // Open in same tab
-                                className="text-gray-400 hover:text-gray-300 transition-colors duration-300 ease-in-out"
-                            >
-                                Contact
-                            </a>
-                        </p>
-                    </div>
                 </div>
 
                 {/* DESKTOP - Text left, icons right */}
