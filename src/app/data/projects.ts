@@ -65,6 +65,17 @@ export const projects = [
         ]
     },
     {
+        name: 'ADS-B Live Flight Map',
+        url: 'https://flights.danglorioso.com',
+        key: 'flights',
+        favicon: 'https://flights.danglorioso.com/favicon.ico',
+        description: 'Self-hosted real-time flight tracker that decodes live ADS-B aircraft signals on a Raspberry Pi and streams them to live web map via WebSocket.',
+        links: [
+            { label: 'View Live Map', url: 'https://flights.danglorioso.com' },
+            { label: 'Source Code', url: 'https://github.com/danglorioso/absb-map' }
+        ]
+    },
+    {
         name: 'Logbook - Digital Flight Simulator Log',
         url: 'https://logbook.danglorioso.com',
         key: 'logbook',
