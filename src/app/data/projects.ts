@@ -69,7 +69,7 @@ export const projects = [
         url: 'https://flights.danglorioso.com',
         key: 'flights',
         favicon: 'https://flights.danglorioso.com/favicon.ico',
-        description: 'Self-hosted real-time flight tracker that decodes live ADS-B aircraft signals on a Raspberry Pi and streams them to live web map via WebSocket.',
+        description: 'A self-hosted real-time ADS-B flight tracking system that runs on a Raspberry Pi, decodes aircraft broadcast signals, and streams live telemetry data to a browser-based interactive map via WebSocket.',
         links: [
             { label: 'View Live Map', url: 'https://flights.danglorioso.com' },
             { label: 'Source Code', url: 'https://github.com/danglorioso/absb-map' }
