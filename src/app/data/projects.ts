@@ -174,6 +174,16 @@ export const projects = [
         ]
     },
     {
+        name: 'Tailwind Color Matcher',
+        url: 'https://colors.danglorioso.com',
+        key: 'colors',
+        favicon: 'https://colors.danglorioso.com/favicon.ico',
+        description: 'A tool for finding and matching Tailwind CSS colors.',
+        links: [
+            { label: 'View Color Matcher', url: 'https://colors.danglorioso.com' }
+        ]
+    },
+    {
         name: 'Status Page',
         url: 'https://status.danglorioso.com',
         key: 'status',
