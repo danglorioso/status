@@ -177,8 +177,8 @@ export const projects = [
         name: 'Tailwind Color Matcher',
         url: 'https://colors.danglorioso.com',
         key: 'colors',
-        favicon: 'https://colors.danglorioso.com/favicon.ico',
-        description: 'A tool for finding and matching Tailwind CSS colors.',
+        favicon: 'https://colors.danglorioso.com/_app/immutable/assets/favicon.798REKe6.svg',
+        description: 'A tool for finding and matching Tailwind CSS colors using CIELAB ΔE* distance metrics.',
         links: [
             { label: 'View Color Matcher', url: 'https://colors.danglorioso.com' }
         ]
