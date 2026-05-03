@@ -2,6 +2,7 @@ export const projects = [
     {
         name: 'DG Portfolio',
         url: 'https://danglorioso.com/',
+        vercelProject: 'danglorioso.com',
         key: 'portfolio',
         favicon: 'https://danglorioso.com/favicon.svg',
         description: 'My personal portfolio website showcasing my projects, skills, and experience. Built in Astro.',
@@ -13,6 +14,7 @@ export const projects = [
     {
         name: 'Demo Playground',
         url: 'https://demo.danglorioso.com',
+        vercelProject: 'demo',
         key: 'demo',
         favicon: 'https://demo.danglorioso.com/favicon.svg',
         description: 'A collection of interactive demos for me to experiment with new web technologies I\'ve discovered.',
@@ -24,6 +26,7 @@ export const projects = [
         {
         name: 'Under 30 VSCode Extension',
         url: 'https://danglorioso.com/under-30',
+        vercelProject: 'danglorioso.com',
         key: 'under-30',
         favicon: 'https://danglorioso.gallerycdn.vsassets.io/extensions/danglorioso/under-30/1.1.1/1736747102401/Microsoft.VisualStudio.Services.Icons.Default',
         description: 'A VSCode extension that helps developers maintain good coding standards by limiting function lengths to set thresholds.',
@@ -35,6 +38,7 @@ export const projects = [
     {
         name: 'Header Hero VSCode Extension',
         url: 'https://danglorioso.com/header-hero',
+        vercelProject: 'danglorioso.com',
         key: 'header-hero',
         favicon: 'https://danglorioso.gallerycdn.vsassets.io/extensions/danglorioso/header-hero/1.0.2/1722298594849/Microsoft.VisualStudio.Services.Icons.Default',
         description: 'A VSCode extension that automatically generates smart and customizable headers for your code files with various styles.',
@@ -46,6 +50,7 @@ export const projects = [
     {
         name: 'METAR Decoder',
         url: 'https://metar.danglorioso.com',
+        vercelProject: 'metar-decoder',
         key: 'metar',
         favicon: 'https://metar.danglorioso.com/favicon.ico',
         description: 'Aviation weather tool that decodes METAR reports into human-readable format with hover-over tooltips.',
@@ -56,6 +61,7 @@ export const projects = [
     {
         name: 'ParkQuest - National Park Tracker',
         url: 'https://parkquest.danglorioso.com',
+        vercelProject: 'parkquest',
         key: 'parkquest',
         favicon: 'https://parkquest.danglorioso.com/favicon.ico',
         description: 'A web app for tracking the US National Parks you\'ve visited.',
@@ -67,6 +73,7 @@ export const projects = [
     {
         name: 'ADS-B Live Flight Map',
         url: 'https://flights.danglorioso.com',
+        vercelProject: 'adsb-map',
         key: 'flights',
         favicon: 'https://flights.danglorioso.com/favicon.ico',
         description: 'A self-hosted real-time ADS-B flight tracking system that runs on a Raspberry Pi, decodes aircraft broadcast signals, and streams live telemetry data to a browser-based interactive map via WebSocket.',
@@ -78,6 +85,7 @@ export const projects = [
     {
         name: 'Logbook - Digital Flight Simulator Log',
         url: 'https://logbook.danglorioso.com',
+        vercelProject: 'logbook',
         key: 'logbook',
         favicon: 'https://logbook.danglorioso.com/favicon.ico',
         description: 'A social network for flight sim enthusiasts to share their flights with other pilots',
@@ -90,6 +98,7 @@ export const projects = [
     {
         name: 'Scott Glorioso Site',
         url: 'https://scottglorioso.com',
+        vercelProject: 'scottglorioso.com',
         key: 'scott',
         favicon: 'https://scottglorioso.com/favicon.ico',
         description: 'Professional musician website featuring album, song, and performance details with a modern, scalable design.',
@@ -100,6 +109,7 @@ export const projects = [
     {
         name: 'Comedy on the Loose Site',
         url: 'https://cotl.danglorioso.com',
+        vercelProject: 'comedyontheloose',
         key: 'cotl',
         favicon: 'https://cotl.danglorioso.com/favicon.ico',
         description: 'Official website for sketch comedy TV show Comedy on the Loose, featuring episode links, sketches, and airing schedules.',
@@ -110,6 +120,7 @@ export const projects = [
     {
         name: 'Headers',
         url: 'https://headers.danglorioso.com',
+        vercelProject: 'headers',
         key: 'headers',
         favicon: 'https://headers.danglorioso.com/favicon.ico',
         description: 'A collection of copy-and-paste-ready documentation templates from my VSCode Extension: Header Hero.',
@@ -120,6 +131,7 @@ export const projects = [
     {
         name: 'Plane Compare',
         url: 'https://planes.danglorioso.com',
+        vercelProject: 'plane-compare',
         key: 'planes',
         favicon: 'https://planes.danglorioso.com/favicon.ico',
         comingSoon: true,
@@ -133,6 +145,7 @@ export const projects = [
     {
         name: 'Track Record Upload',
         url: 'https://track.danglorioso.com',
+        vercelProject: 'track-records-upload',
         key: 'track',
         favicon: 'https://track.danglorioso.com/favicon.ico',
         description: 'A smart web application that automatically detects, parses, and standardizes track meet results into clean CSV reports for data analysis.',
@@ -143,6 +156,7 @@ export const projects = [
     {
         name: 'Lyrics - Hooked On',
         url: 'https://lyrics.danglorioso.com',
+        vercelProject: 'lyrics',
         key: 'lyrics',
         favicon: 'https://lyrics.danglorioso.com/favicon.ico',
         description: 'Lyric search tool that lets you select an artist and search for specific keywords across their entire discography.',
@@ -153,6 +167,7 @@ export const projects = [
     {
         name: 'Depature Board',
         url: 'https://board.danglorioso.com',
+        vercelProject: 'departure-board',
         key: 'board',
         favicon: 'https://board.danglorioso.com/favicon.ico',
         comingSoon: true,
@@ -166,6 +181,7 @@ export const projects = [
     {
         name: 'Dan\'s Pictures',
         url: 'https://pics.danglorioso.com',
+        vercelProject: 'pics',
         key: 'pics',
         favicon: 'https://pics.danglorioso.com/favicon.ico',
         description: 'Personal photography portfolio showcasing my work, complete with Exif metadata.',
@@ -176,6 +192,7 @@ export const projects = [
     {
         name: 'Tailwind Color Matcher',
         url: 'https://colors.danglorioso.com',
+        vercelProject: 'colors',
         key: 'colors',
         favicon: 'https://colors.danglorioso.com/_app/immutable/assets/favicon.798REKe6.svg',
         description: 'A tool for finding and matching Tailwind CSS colors using CIELAB ΔE* distance metrics.',
@@ -186,6 +203,7 @@ export const projects = [
     {
         name: 'Status Page',
         url: 'https://status.danglorioso.com',
+        vercelProject: 'status',
         key: 'status',
         favicon: 'https://status.danglorioso.com/favicon.ico',
         description: 'Real-time status monitoring dashboard for all my projects and services.',

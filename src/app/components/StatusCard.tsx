@@ -67,12 +67,9 @@ export default function StatusCard({
         onStatusUpdate(projectKey, "loading");
 
         try {
-            const res = await fetch(`/api/ping?url=${encodeURIComponent(url)}`);
-            setStatus(res.status === 200 ? "online" : "offline");
-            onStatusUpdate(
-                projectKey,
-                res.status === 200 ? "online" : "offline"
-            );
+            await fetch(url, { method: 'HEAD', mode: 'no-cors' });
+            setStatus("online");
+            onStatusUpdate(projectKey, "online");
             setLastUpdated(new Date());
         } catch {
             setStatus("offline");

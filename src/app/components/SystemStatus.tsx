@@ -3,12 +3,13 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
-type Status = "online" | "offline" | "loading" | "coming-soon";
+type Status = "online" | "offline" | "loading" | "deploying" | "coming-soon";
 
 interface Project {
     key: string;
     name: string;
     url: string;
+    vercelProject?: string;
     favicon?: string;
     comingSoon?: boolean;
     description?: string;
@@ -39,6 +40,12 @@ const statusMap = {
         textColor: "text-red-400",
         badgeColor: "bg-red-400/10 text-red-400 border-red-400/20",
     },
+    deploying: {
+        text: "Deploying",
+        color: "bg-yellow-400 animate-pulse",
+        textColor: "text-yellow-400",
+        badgeColor: "bg-yellow-400/10 text-yellow-400 border-yellow-400/20",
+    },
     "coming-soon": {
         text: "Coming Soon",
         color: "bg-yellow-600",
@@ -46,6 +53,7 @@ const statusMap = {
         badgeColor: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20",
     },
 };
+
 
 export default function SystemStatus({ projects, setLastUpdated }: SystemStatusProps) {
     const [projectStatuses, setProjectStatuses] = useState<Record<string, Status>>({});
@@ -106,14 +114,26 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
 
         setProjectStatuses((prev) => ({ ...prev, [project.key]: "loading" }));
 
-        try {
-            const res = await fetch(`/api/ping?url=${encodeURIComponent(project.url)}`);
-            const newStatus = res.status === 200 ? "online" : "offline";
-            setProjectStatuses((prev) => ({ ...prev, [project.key]: newStatus }));
-            setLastUpdated(new Date());
-        } catch {
-            setProjectStatuses((prev) => ({ ...prev, [project.key]: "offline" }));
-            setLastUpdated(new Date());
+        if (project.vercelProject) {
+            try {
+                const res = await fetch(`/api/vercel?project=${encodeURIComponent(project.vercelProject)}`);
+                if (!res.ok) throw new Error();
+                const { status } = await res.json();
+                setProjectStatuses((prev) => ({ ...prev, [project.key]: status }));
+                setLastUpdated(new Date());
+            } catch {
+                setProjectStatuses((prev) => ({ ...prev, [project.key]: "offline" }));
+                setLastUpdated(new Date());
+            }
+        } else {
+            try {
+                await fetch(project.url, { method: 'HEAD', mode: 'no-cors' });
+                setProjectStatuses((prev) => ({ ...prev, [project.key]: "online" }));
+                setLastUpdated(new Date());
+            } catch {
+                setProjectStatuses((prev) => ({ ...prev, [project.key]: "offline" }));
+                setLastUpdated(new Date());
+            }
         }
     };
 
@@ -124,7 +144,7 @@ export default function SystemStatus({ projects, setLastUpdated }: SystemStatusP
             projects.forEach((project) => {
                 if (!project.comingSoon) checkProjectStatus(project);
             });
-        }, 15000);
+        }, 60000);
 
         return () => clearInterval(interval);
     }, [projects]);
